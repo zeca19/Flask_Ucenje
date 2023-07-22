@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,url_for
 
 
 app = Flask(__name__)
@@ -25,12 +25,12 @@ postovi = [
 
 @app.route("/")
 def hello():
-    return render_template("layout.html", postovi=postovi, title="Pocetna Stranica")
+    return render_template("home.html", postovi=postovi, title="Pocetna Stranica")
 
 
 @app.route("/about")
 def about():
-    return render_template("layout.html", postovi=postovi, title="About stranica")
+    return render_template("about.html", postovi=postovi, title="About stranica")
 
 
 if __name__ == "__main__":
