@@ -1,5 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+
+
 
 
 
@@ -9,6 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' #Ovo daje naziv fajl
 
 
 db=SQLAlchemy(app)
+bcrypt=Bcrypt(app)
 
 
 from flask_blog import routes
