@@ -3,7 +3,11 @@ from flask_blog import db, login_manager
 from flask_login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer  as Serializer
 from flask import current_app
+import pytz
 
+
+
+serbia_timezone=pytz.timezone("Europe/Belgrade")
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -44,7 +48,7 @@ class User(db.Model,UserMixin):
 class Post(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     title=db.Column(db.String(100),nullable=False)
-    date_posted=db.Column(db.DateTime,nullable=False,default=datetime.utcnow())
+    date_posted=db.Column(db.DateTime,nullable=False,default=datetime.now(serbia_timezone))
     content=db.Column(db.Text,nullable=False)
     user_id=db.Column(db.Integer,db.ForeignKey("user.id"),nullable=False)
 
@@ -53,3 +57,12 @@ class Post(db.Model):
         return f"Post('{self.title}','{self.date_posted}','{self.content}')"
     
     # nesto sam ovde dodao
+
+
+
+class Like(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    author=db.Column(db.Integer,db.ForeignKey("user.id"),ondelete="CASCADE",nullable=False)
+    post_id=db.Column(db.Integer,db.ForeignKey("post.id",ondelete="CASCADE"),nullable=False)
+    date_created=db.Column(db.DateTime,nullable=False,default=datetime.now(serbia_timezone))
+
