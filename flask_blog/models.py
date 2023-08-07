@@ -22,6 +22,7 @@ class User(db.Model,UserMixin):
     image_file=db.Column(db.String(20),nullable=False,default='default.jpg')
     password=db.Column(db.String(60),nullable=False)
     posts=db.relationship("Post",backref="author",lazy=True)
+    likes=db.relationship("Like",backref="user")
 
 
 
@@ -51,7 +52,7 @@ class Post(db.Model):
     date_posted=db.Column(db.DateTime,nullable=False,default=datetime.now(serbia_timezone))
     content=db.Column(db.Text,nullable=False)
     user_id=db.Column(db.Integer,db.ForeignKey("user.id"),nullable=False)
-
+    likes=db.relationship("Like",backref="post")
 
     def __repr__(self):
         return f"Post('{self.title}','{self.date_posted}','{self.content}')"
@@ -62,7 +63,7 @@ class Post(db.Model):
 
 class Like(db.Model):
     id=db.Column(db.Integer,primary_key=True)
-    author=db.Column(db.Integer,db.ForeignKey("user.id"),ondelete="CASCADE",nullable=False)
+    author=db.Column(db.Integer,db.ForeignKey("user.id",ondelete="CASCADE"),nullable=False)
     post_id=db.Column(db.Integer,db.ForeignKey("post.id",ondelete="CASCADE"),nullable=False)
     date_created=db.Column(db.DateTime,nullable=False,default=datetime.now(serbia_timezone))
 
