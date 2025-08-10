@@ -12,6 +12,18 @@ This is my personal learning project built with **Flask**, focusing on:
 
 ## 🚀 Getting Started 
 ## Prerequisites
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`SECRET_KEY`
+
+`SQL_ALCHEMY_DATABASE_URI`
+
+`MAIL_USERNAME`
+
+`MAIL_PASSWORD`
 ```bash
 Python 3.8 (recommended)
 Git
