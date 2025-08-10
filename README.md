@@ -59,7 +59,7 @@ flask run
 ## 🚀 Application Demo
 
 ### 1. User Registration
-![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/kreiranje_naloga.gif)
+![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/kreiranje_naloga.gif)
 
 ### 2. User Login
 ![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/logovanje.gif)
