@@ -62,14 +62,14 @@ flask run
 ![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/kreiranje_naloga.gif)
 
 ### 2. User Login
-![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/logovanje.gif)
+![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/logovanje.gif)
 
 ### 3. Creating a post
-![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/objava.gif)
+![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/objava.gif)
 
 ### 4. Password Reset
-![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/zaboravljena1.gif)
-![Creating Account](https://github.com/zeca19/Flask_Ucenje/tree/main/gifs/zaboravljena2.gif)
+![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/zaboravljena1.gif)
+![Creating Account](https://github.com/zeca19/Flask_Ucenje/blob/main/gifs/zaboravljena2.gif)
 
 
 
